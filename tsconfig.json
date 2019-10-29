@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es5",
+    "experimentalDecorators": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "noUnusedLocals":  true,
+    "incremental": true,
+    "outDir": "dist",
+    "tsBuildInfoFile": "dist/.tsBuildInfoFile",
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "declaration": true,
+    "typeRoots": ["./src/types", "./node_modules/@types"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "test/**/*"]
+}
