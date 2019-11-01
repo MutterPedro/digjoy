@@ -63,7 +63,7 @@
       "html"
     ],
     "exclude": [
-      "tests/**",
+      "test/**",
       "node_modules/**/*",
       "**/*.d.ts",
       "bin/**",
