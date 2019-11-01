@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.3](https://github.com/MutterPedro/digjoy/compare/v0.2.2...v0.2.3) (2019-11-01)
+
+
+### Bug Fixes
+
+* **Package.json:** fix package.json ([6e1de22](https://github.com/MutterPedro/digjoy/commit/6e1de22c4d3507f27079598ca49b87082603d4c1))
+
 ### [0.2.2](https://github.com/MutterPedro/digjoy/compare/v0.2.1...v0.2.2) (2019-11-01)
 
 
