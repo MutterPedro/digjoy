@@ -4,7 +4,8 @@
 [![Build Status](https://travis-ci.org/MutterPedro/digjoy.svg?branch=master)](https://travis-ci.org/MutterPedro/digjoy)
 [![Coverage Status](https://coveralls.io/repos/github/MutterPedro/digjoy/badge.svg?branch=master)](https://coveralls.io/github/MutterPedro/digjoy?branch=master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a38ac8458647c365a2c3/maintainability)](https://codeclimate.com/github/MutterPedro/digjoy/maintainability)
-[![Known Vulnerabilities](https://snyk.io/test/github/MutterPedro/digjoy/badge.svg?targetFile=package.json)](https://snyk.io/test/github/MutterPedro/digjoy?targetFile=package.json) [![Greenkeeper badge](https://badges.greenkeeper.io/MutterPedro/digjoy.svg)](https://greenkeeper.io/)
+[![Known Vulnerabilities](https://snyk.io/test/github/MutterPedro/digjoy/badge.svg?targetFile=package.json)](https://snyk.io/test/github/MutterPedro/digjoy?targetFile=package.json)
+[![Greenkeeper badge](https://badges.greenkeeper.io/MutterPedro/digjoy.svg)](https://greenkeeper.io/)
 
 Simple Typescript decorators for express routing with joi validation
 
