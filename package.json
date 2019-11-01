@@ -3,6 +3,7 @@
   "version": "0.2.3",
   "description": "Simple Typescript decorators for express routing with joi validation",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "rimraf ./dist && tsc -p tsconfig.json --sourcemap --strict",
     "lint": "tsc --project tsconfig.json --noEmit && tslint -c tslint.json -p tsconfig.json src/**/*.ts --fix",
