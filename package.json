@@ -2,7 +2,7 @@
   "name": "digjoy",
   "version": "0.2.1",
   "description": "Simple Typescript decorators for express routing with joi validation",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "rimraf ./dist && tsc -p tsconfig.json --sourcemap --strict",
     "lint": "tsc --project tsconfig.json --noEmit && tslint -c tslint.json -p tsconfig.json src/**/*.ts --fix",
@@ -38,7 +38,7 @@
     "url": "https://github.com/MutterPedro/digjoy/issues"
   },
   "files": [
-    "dist"
+    "dist/**/*"
   ],
   "homepage": "https://github.com/MutterPedro/digjoy#readme",
   "husky": {
