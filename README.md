@@ -7,3 +7,5 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/MutterPedro/digjoy/badge.svg?targetFile=package.json)](https://snyk.io/test/github/MutterPedro/digjoy?targetFile=package.json)
 
 Simple Typescript decorators for express routing with joi validation
+
+## Why this weird name?
