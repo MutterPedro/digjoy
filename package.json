@@ -1,6 +1,6 @@
 {
   "name": "digjoy",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Simple Typescript decorators for express routing with joi validation",
   "main": "index.js",
   "scripts": {
