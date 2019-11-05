@@ -12,6 +12,7 @@ export function validateHandler(handler: Function, paramsModel?: joi.ObjectSchem
       const bodyOrQuery: 'body' | 'query' = req.method.toLocaleLowerCase() === HttpMethods.GET ? 'query' : 'body';
       const params = req[bodyOrQuery];
 
+      /* istanbul ignore else */
       if (isDebug()) {
         logger.debug(`${req.method} ${req.url} received with params: ${JSON.stringify(params || {})}`);
       }
