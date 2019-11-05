@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.5](https://github.com/MutterPedro/digjoy/compare/v0.2.4...v0.2.5) (2019-11-05)
+
+
+### Features
+
+* **README:** first version of README ([3bb7af9](https://github.com/MutterPedro/digjoy/commit/3bb7af9b491520acca718d599ad160527915beba))
+
 ### [0.2.4](https://github.com/MutterPedro/digjoy/compare/v0.2.3...v0.2.4) (2019-11-01)
 
 
