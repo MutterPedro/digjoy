@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.6](https://github.com/MutterPedro/digjoy/compare/v0.2.5...v0.2.6) (2019-11-07)
+
+
+### Bug Fixes
+
+* **Params validation:** change joi 'assert' to params model 'validate' ([2884d6a](https://github.com/MutterPedro/digjoy/commit/2884d6a034d9487024d4248e75de9554d18d286d))
+
 ### [0.2.5](https://github.com/MutterPedro/digjoy/compare/v0.2.4...v0.2.5) (2019-11-05)
 
 
