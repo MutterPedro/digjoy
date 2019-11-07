@@ -127,9 +127,7 @@ describe('Controller', () => {
             throw err;
           }
 
-          expect(res.text).to.be.eq(
-            `{\n  "b": "hello world",\n  "a" [31m[1][0m: "50"\n}\n[31m\n[1] "a" must be less than or equal to 10[0m`,
-          );
+          expect(res.text).to.be.eq('"a" must be less than or equal to 10');
           done();
         });
     });

@@ -18,8 +18,13 @@ export function validateHandler(handler: Function, paramsModel?: joi.ObjectSchem
       }
 
       if (paramsModel) {
-        joi.assert(params, paramsModel);
+        const validation = paramsModel.validate(params);
+        if (validation.error) {
+          next(validation.error);
+          return;
+        }
       }
+
       const result = await handler(params);
       res.status(OK).send(result);
     } catch (e) {
