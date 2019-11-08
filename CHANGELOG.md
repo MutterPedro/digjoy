@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.7](https://github.com/MutterPedro/digjoy/compare/v0.2.6...v0.2.7) (2019-11-08)
+
+
+### Features
+
+* **Dependencies:** update dependencies ([92e097e](https://github.com/MutterPedro/digjoy/commit/92e097ed4a9434b24e795ea1fb40a981af780396))
+
 ### [0.2.6](https://github.com/MutterPedro/digjoy/compare/v0.2.5...v0.2.6) (2019-11-07)
 
 
