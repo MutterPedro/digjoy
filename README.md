@@ -17,24 +17,15 @@ npm i -S digjoy
 
 ## Motivation
 
-Digjoy is inspired initially in the java framework **Spring MVC**, it uses **Typescript** decorators like the old
-**Java annotations** to define the routes and methods. You may thing _" just another controller framework, why should I
-use it? There is many other with thousands of stars on GitHub..."_. Well, in fact, it is another controller framework, but it
-is very opinionated, in my sight, it is very easy to use, very straightforward and almost no configuration (things that
-I usually take on a count to choose a library). It is ideal for simple APIs, which you just need to define some routes and validate the request body.
+Digjoy was inspired initially in the java framework **Spring MVC**, it uses **Typescript** decorators like the old **Java annotations** to define the routes and methods. You may thing _" just another controller framework, why should I use it? There is many other with thousands of stars on GitHub..."_. Well, in fact, it is another controller framework, but it is very opinionated, in my sight, it is very easy to use, very straightforward and almost no configuration (things that I usually take on a count to choose a library). It is ideal for simple APIs, which you just need to define some routes and validate the request body.
 
 ## Why this weird name?
 
-Digjoy uses [Joi](https://hapi.dev/family/joi/?v=16.1.7) to make the request body object validation and every Brazilian
-90's children know this [song](https://www.youtube.com/watch?v=9RcN6uMnWkc). I don't know why, but every time I hear
-the word "joi' or use it on code, I remember that great song. If you didn't know that song, feel free to enjoy this
-masterpiece for a while 😊.
+Digjoy uses [Joi](https://hapi.dev/family/joi/?v=16.1.7) to make the request body object validation and every Brazilian 90's children know this [song](https://www.youtube.com/watch?v=9RcN6uMnWkc). I don't know why, but every time I hear the word "joi" or use it on code, I remember that great song. If you didn't know that song, feel free to enjoy this masterpiece for a while 😊.
 
 ## How to use it?
 
-Digjoy exclusively counts on **Typescript decorators**. So to use it, basically you need to use its decorators then import
-the controller files in your app entry point.
-On your controllers definitions, use the **Controller** decorator:
+Digjoy exclusively counts on **Typescript decorators**. So to use it, basically you need to use its decorators then import the controller files in your app entry point. On your controllers definitions, use the **Controller** decorator:
 
 ```typescript
 import { Controller } from 'digjoy';
@@ -47,13 +38,9 @@ class Example {}
 class Example2 {}
 ```
 
-To define some routes, is simple just like before. You just to use the **HTTP methods decorators** above the controller methods.
-If you need to validate the request body, just pass a **Joi schema object** as the second parameter. If the params `( query field for GET requests or body field for rest methods)` don't follow the schema definition, it will throw a
-[ValidationError](https://hapi.dev/family/joi/?v=16.1.7#validationerror).
+To define some routes, is simple just like before. You just to use the **HTTP methods decorators** above the controller methods. If you need to validate the request body, just pass a **Joi schema object** as the second parameter. If the params `( query field for GET requests or body field for rest methods)` don't follow the schema definition, it will throw a [ValidationError](https://hapi.dev/family/joi/?v=16.1.7#validationerror).
 
-**Attention**: your route handlers won't deal with **request** and **response** objects from express. The parameters will
-arrive as the function's arguments, and to respond to the request you just need to **return** or **throw** something.
-Example:
+**Attention**: your route handlers won't deal with **request** and **response** objects from express. The parameters will arrive as the function's arguments, and to respond to the request you just need to **return** or **throw** something. Example:
 
 ```typescript
 import joi from '@hapi/joi';
@@ -78,12 +65,9 @@ class Example {
 }
 ```
 
-Digjoy supports **all HTTTP methods** in the same fashion. You just to be aware that when you will be using a **GET** route,
-the parameters should be sent as **query strings**. The other methods (POST, PUT, HEAD, etc), you should send the parameters
-as the request body.
+Digjoy supports **all HTTTP methods** in the same fashion. You just to be aware that when you will be using a **GET** route, the parameters should be sent as **query strings**. The other methods (POST, PUT, HEAD, etc), you should send the parameters as the request body.
 
-The last, but crucial, step is to initialize digjoy. You just need to import the function **controllerSetup**, run it,
-and import the controllers definitions files. Example:
+The last, but crucial, step is to initialize digjoy. You just need to import the function **controllerSetup**, run it, and import the controllers definitions files. Example:
 
 ```typescript
 import { controllerSetup } from 'digjoy';
@@ -93,10 +77,7 @@ import './path/to/contollers';
 const app = controllerSetup();
 ```
 
-The init function **controllerSetup** accept an options object as parameters. Which have the fields **debug** (boolean
-for debugging logs propose) and **bodyLimit** (for body size limit definition, it follows **body-parser** rules). Also
-**controllerSetup** return an **express app instance**, which you can use as normal express app to plug in middlewares
-and extras routes.
+The init function **controllerSetup** accept an options object as parameters. Which have the fields **debug** (boolean for debugging logs propose) and **bodyLimit** (for body size limit definition, it follows **body-parser** rules). Also **controllerSetup** return an **express app instance**, which you can use as normal express app to plug in middlewares and extras routes.
 
 ```typescript
 import { controllerSetup } from 'digjoy';

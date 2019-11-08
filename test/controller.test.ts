@@ -79,6 +79,7 @@ describe('Controller', () => {
 
   let loggerInfoSpy: sinon.SinonSpy;
   beforeEach(() => {
+    // @ts-ignore
     loggerInfoSpy = sinon.spy(logger, 'info');
   });
 
@@ -171,6 +172,7 @@ describe('Controller with interceptor', () => {
 
   let loggerInfoSpy: sinon.SinonSpy;
   beforeEach(() => {
+    // @ts-ignore
     loggerInfoSpy = sinon.spy(logger, 'info');
   });
 
