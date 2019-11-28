@@ -17,7 +17,7 @@ npm i -S digjoy
 
 ## Motivation
 
-Digjoy was inspired initially in the java framework **Spring MVC**, it uses **Typescript** decorators like the old **Java annotations** to define the routes and methods. You may thing _" just another controller framework, why should I use it? There is many other with thousands of stars on GitHub..."_. Well, in fact, it is another controller framework, but it is very opinionated, in my sight, it is very easy to use, very straightforward and almost no configuration (things that I usually take on a count to choose a library). It is ideal for simple APIs, which you just need to define some routes and validate the request body.
+Digjoy was inspired initially on the java framework **Spring MVC**, it uses **Typescript** decorators like the old **Java annotations** to define the routes and methods. You may think _"just another controller framework, why should I use it? There is many other with thousands of stars on GitHub..."_. Well, in fact, it is another controller framework, but it is a very opinionated one, as I see it, it is very easy to use, very straightforward and needs almost no configuration (things that I usually take into account to choose a library). It is ideal for simple APIs, when you just need to define some routes and validate the request body.
 
 ## Why this weird name?
 
@@ -38,7 +38,7 @@ class Example {}
 class Example2 {}
 ```
 
-To define some routes, is simple just like before. You just to use the **HTTP methods decorators** above the controller methods. If you need to validate the request body, just pass a **Joi schema object** as the second parameter. If the params `( query field for GET requests or body field for rest methods)` don't follow the schema definition, it will throw a [ValidationError](https://hapi.dev/family/joi/?v=16.1.7#validationerror).
+To define some routes, it is simple just like before. You just need to use the **HTTP methods decorators** above the controller methods. If you need to validate the request body, just pass a **Joi schema object** as the second parameter. If the params `( query field for GET requests or body field for rest methods)` don't follow the schema definition, it will throw a [ValidationError](https://hapi.dev/family/joi/?v=16.1.7#validationerror).
 
 **Attention**: your route handlers won't deal with **request** and **response** objects from express. The parameters will arrive as the function's arguments, and to respond to the request you just need to **return** or **throw** something. Example:
 
