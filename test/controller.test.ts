@@ -65,6 +65,23 @@ describe('Controller', () => {
     async testOptions() {}
 
     async testNoRoute() {}
+
+    @POST('path/:a', joi.object({ a: joi.string() }))
+    async testWithParam({ a }: { a: string }) {
+      logger.info(a);
+    }
+
+    @POST('path2/:b', joi.object({ b: joi.string(), bodyParam: joi.number() }))
+    async testWithParamAndBody({ b, bodyParam }: { b: string; bodyParam: number }) {
+      logger.info(b);
+      logger.info(bodyParam.toString());
+    }
+
+    @GET('path/:c', joi.object({ c: joi.string(), queryParam: joi.number() }))
+    async testWithParamAndQuery({ c, queryParam }: { c: string; queryParam: number }) {
+      logger.info(c);
+      logger.info(queryParam.toString());
+    }
   }
 
   const app = controllerSetup({ debug: true });
@@ -132,6 +149,25 @@ describe('Controller', () => {
           done();
         });
     });
+
+    it('should log the correct params within url', done => {
+      supertest(app)
+        .get('/test/path/test')
+        .query({ c: 5, queryParam: 5 })
+        .set('Content-type', 'application/json')
+        .expect(OK)
+        .end((err, res) => {
+          if (err) {
+            throw err;
+          }
+
+          expect(loggerInfoSpy).to.be.calledTwice;
+          expect(loggerInfoSpy).to.be.calledWith('5');
+          expect(loggerInfoSpy).to.be.calledWith('test');
+
+          done();
+        });
+    });
   });
 
   describe('POST', () => {
@@ -148,6 +184,42 @@ describe('Controller', () => {
 
           expect(loggerInfoSpy).to.be.calledOnce;
           expect(loggerInfoSpy).to.be.calledWith('hello world');
+
+          done();
+        });
+    });
+
+    it('should log the correct params within url', done => {
+      supertest(app)
+        .post('/test/path/test')
+        .set('Content-type', 'application/json')
+        .expect(OK)
+        .end((err, res) => {
+          if (err) {
+            throw err;
+          }
+
+          expect(loggerInfoSpy).to.be.called;
+          expect(loggerInfoSpy).to.be.calledWith('test');
+
+          done();
+        });
+    });
+
+    it('should log the correct params within url', done => {
+      supertest(app)
+        .post('/test/path2/test')
+        .send({ bodyParam: 5 })
+        .set('Content-type', 'application/json')
+        .expect(OK)
+        .end((err, res) => {
+          if (err) {
+            throw err;
+          }
+
+          expect(loggerInfoSpy).to.be.calledTwice;
+          expect(loggerInfoSpy).to.be.calledWith('5');
+          expect(loggerInfoSpy).to.be.calledWith('test');
 
           done();
         });

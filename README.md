@@ -148,7 +148,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Next Steps
 
-- [ ] Support to in route params: `GET /user/:id`
+- [x] Support to in route params: `GET /user/:id`
 - [ ] Support to route specific middleware
 - [ ] Better documentation
 - [ ] Helpful utilities
