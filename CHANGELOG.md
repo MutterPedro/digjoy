@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/MutterPedro/digjoy/compare/v0.2.9...v0.3.0) (2020-03-19)
+
+
+### Bug Fixes
+
+* **GitHub Action:** fix linting step ([f0d8868](https://github.com/MutterPedro/digjoy/commit/f0d886853469fa0438b8a11e380afef61bbc98b2))
+
 ### [0.2.9](https://github.com/MutterPedro/digjoy/compare/v0.2.8...v0.2.9) (2020-03-19)
 
 
