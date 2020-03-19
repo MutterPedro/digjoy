@@ -44,7 +44,7 @@ To define some routes, it is simple just like before. You just need to use the *
 
 ```typescript
 import joi from '@hapi/joi';
-import { Controller, GET } from 'digjoy';
+import { Controller, GET, POST } from 'digjoy';
 
 const paramsSchema = joi.object({
   a: joi.number(),
@@ -59,6 +59,11 @@ class Example {
   }
 
   @GET('/sum', paramsSchema)
+  private sum({ a, b }: { a: number; b: number }) {
+    return a + b;
+  }
+
+  @POST('/sum/:a', paramsSchema)
   private sum({ a, b }: { a: number; b: number }) {
     return a + b;
   }
