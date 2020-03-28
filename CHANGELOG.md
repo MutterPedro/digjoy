@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.3](https://github.com/MutterPedro/digjoy/compare/v0.3.2...v0.3.3) (2020-03-28)
+
+
+### Features
+
+* **Routes:** added option to import just the routes definition ([99209d5](https://github.com/MutterPedro/digjoy/commit/99209d5724e3d13aab46e567d1e304cc052c3b55))
+
 ### [0.3.2](https://github.com/MutterPedro/digjoy/compare/v0.3.1...v0.3.2) (2020-03-28)
 
 
