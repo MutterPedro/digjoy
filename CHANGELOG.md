@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.2](https://github.com/MutterPedro/digjoy/compare/v0.3.1...v0.3.2) (2020-03-28)
+
+
+### Features
+
+* **tsconfig.json:** updated tsconfig.json ([e56c1b1](https://github.com/MutterPedro/digjoy/commit/e56c1b169433631a4920a8ecb43f76671aa25032))
+
 ### [0.3.1](https://github.com/MutterPedro/digjoy/compare/v0.3.0...v0.3.1) (2020-03-25)
 
 ## [0.3.0](https://github.com/MutterPedro/digjoy/compare/v0.2.9...v0.3.0) (2020-03-19)
