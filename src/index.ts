@@ -17,5 +17,6 @@ export function controllerSetup(options: { debug?: boolean; bodyLimit?: number |
   return app;
 }
 
+export { router as Routes };
 export * from './decorators/methods';
 export { Controller } from './decorators/controller';
