@@ -14,9 +14,6 @@ export const router = Router();
 
 export function Controller(route: string, ...interceptors: RequestHandler[]) {
   return (constructor: Function) => {
-    const innerRouter = Router();
-    interceptors.forEach((i) => innerRouter.use(i));
-
     Object.keys(constructor.prototype).forEach((key) => {
       const handler = constructor.prototype[key];
       if (typeof handler === 'function' && Reflect.hasMetadata(Metadatas.Method, constructor.prototype, key)) {
@@ -25,7 +22,7 @@ export function Controller(route: string, ...interceptors: RequestHandler[]) {
         const path: string = Reflect.getMetadata(Metadatas.Path, constructor.prototype, key);
 
         const fullRoute = join('/', route, path);
-        innerRouter[method](fullRoute, validateHandler(handler, schema));
+        router[method](fullRoute, ...interceptors, validateHandler(handler, schema));
 
         /* istanbul ignore else */
         if (!PRODUCTION) {
@@ -33,7 +30,5 @@ export function Controller(route: string, ...interceptors: RequestHandler[]) {
         }
       }
     });
-
-    router.use(innerRouter);
   };
 }
