@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.9](https://github.com/MutterPedro/digjoy/compare/v0.3.8...v0.3.9) (2020-04-30)
+
 ### [0.3.8](https://github.com/MutterPedro/digjoy/compare/v0.3.7...v0.3.8) (2020-04-15)
 
 ### [0.3.7](https://github.com/MutterPedro/digjoy/compare/v0.3.6...v0.3.7) (2020-04-13)
