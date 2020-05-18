@@ -7,12 +7,31 @@ import supertest from 'supertest';
 import { BAD_REQUEST, OK, INTERNAL_SERVER_ERROR } from 'http-status';
 import 'reflect-metadata';
 
-import { CONNECT, Controller, controllerSetup, DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT, TRACE } from '../src';
+import {
+  CONNECT,
+  Controller,
+  controllerSetup,
+  DELETE,
+  GET,
+  HEAD,
+  OPTIONS,
+  PATCH,
+  POST,
+  PUT,
+  TRACE,
+  Routes,
+} from '../src';
 import { HttpMethod } from '../src/constants/HttpMethods';
 import { Metadatas } from '../src/constants/Metadatas';
 import logger from '../src/utils/logger';
 
 chai.use(sinonChai);
+
+describe('Routes', () => {
+  it('should be an express router', () => {
+    expect(Routes).to.be.a('function');
+  });
+});
 
 describe('Controller', () => {
   @Controller('test')
@@ -20,11 +39,7 @@ describe('Controller', () => {
     @GET(
       'path1',
       joi.object({
-        a: joi
-          .number()
-          .min(1)
-          .max(10)
-          .integer(),
+        a: joi.number().min(1).max(10).integer(),
         b: joi.string(),
       }),
     )
@@ -115,7 +130,7 @@ describe('Controller', () => {
   });
 
   describe('GET', () => {
-    it('should log the correct params', done => {
+    it('should log the correct params', (done) => {
       supertest(app)
         .get('/test/path1')
         .query({ a: 5, b: 'hello world' })
@@ -134,7 +149,7 @@ describe('Controller', () => {
         });
     });
 
-    it('should complain about wrong parameters', done => {
+    it('should complain about wrong parameters', (done) => {
       supertest(app)
         .get('/test/path1')
         .query({ a: 50, b: 'hello world' })
@@ -150,7 +165,7 @@ describe('Controller', () => {
         });
     });
 
-    it('should log the correct params within url', done => {
+    it('should log the correct params within url', (done) => {
       supertest(app)
         .get('/test/path/test')
         .query({ c: 5, queryParam: 5 })
@@ -171,7 +186,7 @@ describe('Controller', () => {
   });
 
   describe('POST', () => {
-    it('should log the correct params', done => {
+    it('should log the correct params', (done) => {
       supertest(app)
         .post('/test/path2')
         .send({ a: 'hello world' })
@@ -189,7 +204,7 @@ describe('Controller', () => {
         });
     });
 
-    it('should log the correct params within url', done => {
+    it('should log the correct params within url', (done) => {
       supertest(app)
         .post('/test/path/test')
         .set('Content-type', 'application/json')
@@ -206,7 +221,7 @@ describe('Controller', () => {
         });
     });
 
-    it('should log the correct params within url', done => {
+    it('should log the correct params within url', (done) => {
       supertest(app)
         .post('/test/path2/test')
         .send({ bodyParam: 5 })
@@ -252,7 +267,7 @@ describe('Controller with interceptor', () => {
     loggerInfoSpy.restore();
   });
 
-  it('should run the interceptor', done => {
+  it('should run the interceptor', (done) => {
     supertest(app)
       .get('/test2/path')
       .set('Content-type', 'application/json')
