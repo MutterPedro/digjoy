@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.12](https://github.com/MutterPedro/digjoy/compare/v0.3.11...v0.3.12) (2020-06-18)
+
+
+### Features
+
+* **GH packages:** added GH repo as publish config ([7f69952](https://github.com/MutterPedro/digjoy/commit/7f69952beb080569b5e257ce4e1cd5fd83ca5054))
+
 ### [0.3.11](https://github.com/MutterPedro/digjoy/compare/v0.3.10...v0.3.11) (2020-06-04)
 
 ### [0.3.10](https://github.com/MutterPedro/digjoy/compare/v0.3.9...v0.3.10) (2020-05-18)
