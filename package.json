@@ -21,7 +21,7 @@
     "url": "git+ssh://git@github.com/MutterPedro/digjoy.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/MutterPedro"
   },
   "keywords": [
     "controller",
