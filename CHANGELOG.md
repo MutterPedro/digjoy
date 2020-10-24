@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/MutterPedro/digjoy/compare/v0.3.14...v0.4.0) (2020-10-24)
+
+
+### Features
+
+* **.npmrc:** added .npmrc file ([5082646](https://github.com/MutterPedro/digjoy/commit/5082646a39c9de9b0321c50a4f8c87e5c70d2dc4))
+
+
+### Bug Fixes
+
+* **registry:** fixed registry ([27e5d3b](https://github.com/MutterPedro/digjoy/commit/27e5d3b2ebf3ce6585b68cc7e3628c44907f36b9))
+
 ### [0.3.14](https://github.com/MutterPedro/digjoy/compare/v0.3.13...v0.3.14) (2020-07-29)
 
 ### [0.3.13](https://github.com/MutterPedro/digjoy/compare/v0.3.12...v0.3.13) (2020-07-09)
