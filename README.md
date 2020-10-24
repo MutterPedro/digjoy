@@ -21,7 +21,7 @@ Digjoy was inspired initially on the java framework **Spring MVC**, it uses **Ty
 
 ## Why this weird name?
 
-Digjoy uses [Joi](https://hapi.dev/family/joi/?v=16.1.7) to make the request body object validation and every Brazilian 90's children know this [song](https://www.youtube.com/watch?v=9RcN6uMnWkc). I don't know why, but every time I hear the word "joi" or use it on code, I remember that great song. If you didn't know that song, feel free to enjoy this masterpiece for a while 😊.
+Digjoy uses [Joi](https://joi.dev/) to make the request body object validation and every Brazilian 90's children know this [song](https://www.youtube.com/watch?v=9RcN6uMnWkc). I don't know why, but every time I hear the word "joi" or use it on code, I remember that great song. If you didn't know that song, feel free to enjoy this masterpiece for a while 😊.
 
 ## How to use it?
 
@@ -38,12 +38,12 @@ class Example {}
 class Example2 {}
 ```
 
-To define some routes, it is simple just like before. You just need to use the **HTTP methods decorators** above the controller methods. If you need to validate the request body, just pass a **Joi schema object** as the second parameter. If the params `( query field for GET requests or body field for rest methods)` don't follow the schema definition, it will throw a [ValidationError](https://hapi.dev/family/joi/?v=16.1.7#validationerror).
+To define some routes, it is simple just like before. You just need to use the **HTTP methods decorators** above the controller methods. If you need to validate the request body, just pass a **Joi schema object** as the second parameter. If the params `( query field for GET requests or body field for rest methods)` don't follow the schema definition, it will throw a [ValidationError](https://joi.dev/api/?v=17.3.0#validationerror).
 
 **Attention**: your route handlers won't deal with **request** and **response** objects from express. The parameters will arrive as the function's arguments, and to respond to the request you just need to **return** or **throw** something. Example:
 
 ```typescript
-import joi from '@hapi/joi';
+import joi from 'joi';
 import { Controller, GET, POST } from 'digjoy';
 
 const paramsSchema = joi.object({

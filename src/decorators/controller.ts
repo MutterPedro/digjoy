@@ -1,8 +1,8 @@
 /* tslint:disable:function-name */
-import { ObjectSchema } from '@hapi/joi';
+import 'reflect-metadata';
+import { ObjectSchema } from 'joi';
 import { RequestHandler, Router } from 'express';
 import { join } from 'path';
-import 'reflect-metadata';
 
 import { HttpMethod } from '../constants/HttpMethods';
 import { Metadatas } from '../constants/Metadatas';

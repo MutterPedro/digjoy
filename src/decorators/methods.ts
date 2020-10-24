@@ -1,4 +1,4 @@
-import { ObjectSchema } from '@hapi/joi';
+import { ObjectSchema } from 'joi';
 import 'reflect-metadata';
 
 import { HttpMethods } from '../constants/HttpMethods';

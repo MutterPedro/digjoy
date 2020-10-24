@@ -1,4 +1,4 @@
-import joi, { ObjectSchema, ValidationError } from '@hapi/joi';
+import joi, { ObjectSchema, ValidationError } from 'joi';
 import chai, { expect } from 'chai';
 import { ErrorRequestHandler } from 'express';
 import sinon from 'sinon';

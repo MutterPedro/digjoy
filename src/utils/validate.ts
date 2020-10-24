@@ -1,4 +1,4 @@
-import joi from '@hapi/joi';
+import joi from 'joi';
 import { RequestHandler } from 'express';
 import { OK } from 'http-status';
 
